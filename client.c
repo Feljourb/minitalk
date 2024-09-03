@@ -6,7 +6,7 @@
 /*   By: feljourb <feljourb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 18:17:55 by feljourb          #+#    #+#             */
-/*   Updated: 2024/08/25 18:55:02 by feljourb         ###   ########.fr       */
+/*   Updated: 2024/09/03 00:51:04 by feljourb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ void envoyer_message(int pid, char c)
 		if((c >> i) & 1)
 		{
 			kill(pid, SIGUSR2);
-			ft_printf("le message de SIGUSR2 pour le bit %d\n", i);
+			//ft_printf("le message de SIGUSR2 pour le bit %d\n", i);
 		}
 		else
 		{
 			kill(pid, SIGUSR1);
-			ft_printf("le message de SIGUSR1 POUR LE BIT %d\n", i);
+			//ft_printf("le message de SIGUSR1 POUR LE BIT %d\n", i);
 		}
 		usleep(150);
 		i--;
@@ -47,6 +47,5 @@ int	main(int ac, char **av)
 		envoyer_message(pid, message[i]);
 		i++;
 	}
-
 	return(0);
 }

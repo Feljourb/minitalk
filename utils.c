@@ -6,7 +6,7 @@
 /*   By: feljourb <feljourb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 18:30:56 by feljourb          #+#    #+#             */
-/*   Updated: 2024/09/01 22:32:58 by feljourb         ###   ########.fr       */
+/*   Updated: 2024/09/03 16:11:10 by feljourb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,9 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	if (result <= 0)
+	{
+		ft_printf("pid error");
 		exit(1);
+	}
 	return (result);
 }
