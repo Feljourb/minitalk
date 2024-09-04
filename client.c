@@ -6,46 +6,46 @@
 /*   By: feljourb <feljourb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 18:17:55 by feljourb          #+#    #+#             */
-/*   Updated: 2024/09/03 00:51:04 by feljourb         ###   ########.fr       */
+/*   Updated: 2024/09/03 21:40:18 by feljourb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void envoyer_message(int pid, char c)
+void	envoyer_message(int pid, char c)
 {
-	int i = 7;
-	while(i >= 0)
+	int	i;
+
+	i = 7;
+	while (i >= 0)
 	{
-		if((c >> i) & 1)
-		{
+		if ((c >> i) & 1)
 			kill(pid, SIGUSR2);
-			//ft_printf("le message de SIGUSR2 pour le bit %d\n", i);
-		}
 		else
-		{
 			kill(pid, SIGUSR1);
-			//ft_printf("le message de SIGUSR1 POUR LE BIT %d\n", i);
-		}
-		usleep(150);
+		usleep(500);
 		i--;
 	}
 }
 
 int	main(int ac, char **av)
 {
-	if(ac != 3)
+	int		pid;
+	char	*message;
+	int		i;
+
+	if (ac != 3)
 	{
 		ft_printf("seulement 3 arguments entrés\n");
 		exit(1);
 	}
-	int pid = ft_atoi(av[1]);
-	char *message = av[2];
-	int i = 0;
-	while(message[i])
+	pid = ft_atoi(av[1]);
+	message = av[2];
+	i = 0;
+	while (message[i])
 	{
 		envoyer_message(pid, message[i]);
 		i++;
 	}
-	return(0);
+	return (0);
 }

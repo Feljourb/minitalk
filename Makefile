@@ -6,7 +6,7 @@
 #    By: feljourb <feljourb@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/24 18:41:11 by feljourb          #+#    #+#              #
-#    Updated: 2024/08/31 14:25:30 by feljourb         ###   ########.fr        #
+#    Updated: 2024/09/03 17:21:11 by feljourb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,17 +19,17 @@ CFLAGS =  -Wall -Wextra -Werror
 
 CC = cc
 
-SRCS_C = client.c utils.c ft_printf/ft_printf.c ft_printf/ft_putchar.c ft_printf/ft_puthexa.c \
-		ft_printf/ft_putnbr.c ft_printf/ft_putstr.c ft_printf/ft_putunbr.c
+SRCS_C = client.c utils.c ftprintf/ft_printf.c ftprintf/ft_putchar.c ftprintf/ft_puthexa.c \
+		ftprintf/ft_putnbr.c ftprintf/ft_putstr.c ftprintf/ft_putunbr.c
 		
-SRCS_S = server.c ft_printf/ft_printf.c ft_printf/ft_putchar.c ft_printf/ft_puthexa.c \
-		ft_printf/ft_putnbr.c ft_printf/ft_putstr.c ft_printf/ft_putunbr.c
+SRCS_S = server.c ftprintf/ft_printf.c ftprintf/ft_putchar.c ftprintf/ft_puthexa.c \
+		ftprintf/ft_putnbr.c ftprintf/ft_putstr.c ftprintf/ft_putunbr.c
 		
-SRCS_C_BONUS = bonus/client_bonus.c utils.c ft_printf/ft_printf.c ft_printf/ft_putchar.c ft_printf/ft_puthexa.c \
-		ft_printf/ft_putnbr.c ft_printf/ft_putstr.c ft_printf/ft_putunbr.c
+SRCS_C_BONUS = bonus/client_bonus.c utils.c ftprintf/ft_printf.c ftprintf/ft_putchar.c ftprintf/ft_puthexa.c \
+		ftprintf/ft_putnbr.c ftprintf/ft_putstr.c ftprintf/ft_putunbr.c
 
-SRCS_S_BONUS = bonus/server_bonus.c ft_printf/ft_printf.c ft_printf/ft_putchar.c ft_printf/ft_puthexa.c \
-		ft_printf/ft_putnbr.c ft_printf/ft_putstr.c ft_printf/ft_putunbr.c
+SRCS_S_BONUS = bonus/server_bonus.c ftprintf/ft_printf.c ftprintf/ft_putchar.c ftprintf/ft_puthexa.c \
+		ftprintf/ft_putnbr.c ftprintf/ft_putstr.c ftprintf/ft_putunbr.c
 
 OBJS_C = $(SRCS_C:.c=.o)
 
