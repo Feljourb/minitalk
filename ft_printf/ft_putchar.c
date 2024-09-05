@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: feljourb <feljourb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/22 18:15:29 by feljourb          #+#    #+#             */
-/*   Updated: 2024/09/05 13:49:22 by feljourb         ###   ########.fr       */
+/*   Created: 2023/12/24 20:47:37 by feljourb          #+#    #+#             */
+/*   Updated: 2023/12/29 16:44:54 by feljourb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_H
-# define MINITALK_H
+#include "ft_printf.h"
 
-# include <signal.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include "./ft_printf/ft_printf.h"
-
-int	ft_atoi(const char *str);
-
-#endif
+int	ft_putchar(char c)
+{
+	write (1, &c, 1);
+	return (1);
+}
